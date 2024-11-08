@@ -1,0 +1,8 @@
+.env
+migrations
+migrations/*
+config/db.go
+.idea
+.idea/
+go.mod
+go.sum

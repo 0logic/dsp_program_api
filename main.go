@@ -23,12 +23,12 @@ func main() {
 	adminGroup.Use(middlewares.AddRequestLog("程序化后台", "请求日志"))
 	//adminGroup.Use(middlewares.CheckAuth("程序化后台", "权限校验"))
 	{
-		adminGroup.GET("/campaign", controllers.Campaign)
-		adminGroup.POST("/material", controllers.Material)
-		adminGroup.POST("/account", controllers.Account)
+		//adminGroup.GET("/campaign", controllers.Campaign)
+		//adminGroup.POST("/material", controllers.Material)
+		//adminGroup.POST("/account", controllers.Account)
 		adminGroup.Any("/guest", controllers.Guest)
-		adminGroup.Any("/media", controllers.DspMedia)
-		adminGroup.Any("/mediaPosition", controllers.DspMediaPosition)
+		//adminGroup.Any("/media", controllers.DspMedia)
+		//adminGroup.Any("/mediaPosition", controllers.DspMediaPosition)
 
 	}
 

@@ -37,7 +37,7 @@ func main() {
 	mojiGroup.Use(middlewares.AddRequestLog("墨迹天气"))
 	{
 		//get media request
-		mojiGroup.GET("/callback", controllers.GetCall)
+		//mojiGroup.GET("/callback", controllers.GetCall)
 	}
 
 	// run

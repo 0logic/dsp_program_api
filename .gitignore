@@ -6,3 +6,5 @@ config/db.go
 .idea/
 go.mod
 go.sum
+tmp
+tmp/*

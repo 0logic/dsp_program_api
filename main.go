@@ -3,6 +3,7 @@ package main
 import (
 	"dsp_program_api/controllers"
 	"dsp_program_api/middlewares"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,6 +16,14 @@ func main() {
 
 	// start
 	r := gin.Default()
+	// proxy cors
+	corsConfig := cors.DefaultConfig()
+	corsConfig.AllowOrigins = []string{"*"}
+	corsConfig.AllowMethods = []string{"GET", "POST", "PUT", "DELETE", "PATCH"}
+	corsConfig.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "Authorization"}
+	r.Use(cors.New(corsConfig))
+
+	// api
 	apiGroup := r.Group("/api")
 
 	// global add middlewares

@@ -18,13 +18,14 @@ func main() {
 	r := gin.Default()
 	// proxy cors
 	corsConfig := cors.DefaultConfig()
-	corsConfig.AllowOrigins = []string{"*"}
+	//corsConfig.AllowOrigins = []string{"*"}
+	corsConfig.AllowAllOrigins = true
 	corsConfig.AllowMethods = []string{"GET", "POST", "PUT", "DELETE", "PATCH"}
 	corsConfig.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type", "Authorization", "Token"}
 	corsConfig.ExposeHeaders = []string{"Content-Length", "Access-Control-Allow-Origin", "Access-Control-Allow-Headers", "Content-Type"}
 	corsConfig.AllowCredentials = true
 	r.Use(cors.New(corsConfig))
-	
+
 	// api
 	apiGroup := r.Group("/api")
 

@@ -20,7 +20,10 @@ func GuestPost(ctx *gin.Context) {
 	guest_company, _ := ctx.GetPostForm("company")
 	country, _ := ctx.GetPostForm("country")
 	reason, _ := ctx.GetPostForm("reason") // 处理原因长度过长
-	reason = reason[0:248]
+	if len(reason) > 250 {
+		reason = reason[0:248]
+	}
+
 	guest_ip := ctx.ClientIP()
 
 	// 同一个用户当日不能超过2次提交

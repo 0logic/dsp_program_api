@@ -41,7 +41,8 @@ func main() {
 		adminGroup.Any("/guest", controllers.Guest)
 		//adminGroup.Any("/media", controllers.DspMedia)
 		//adminGroup.Any("/mediaPosition", controllers.DspMediaPosition)
-
+		adminGroup.Any("/adPartner", controllers.DspAdPartner)
+		adminGroup.Any("/channelPartner", controllers.DspChannelPartner)
 	}
 
 	//mojiApp request

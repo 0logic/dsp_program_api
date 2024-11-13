@@ -39,8 +39,8 @@ func main() {
 		//adminGroup.POST("/material", controllers.Material)
 		//adminGroup.POST("/account", controllers.Account)
 		adminGroup.Any("/guest", controllers.Guest)
-		//adminGroup.Any("/media", controllers.DspMedia)
-		//adminGroup.Any("/mediaPosition", controllers.DspMediaPosition)
+		adminGroup.Any("/media", controllers.DspMedia)
+		adminGroup.Any("/mediaPosition", controllers.DspMediaPosition)
 		adminGroup.Any("/adPartner", controllers.DspAdPartner)
 		adminGroup.Any("/channelPartner", controllers.DspChannelPartner)
 	}
